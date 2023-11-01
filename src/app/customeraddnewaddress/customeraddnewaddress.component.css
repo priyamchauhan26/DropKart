@@ -1,0 +1,47 @@
+/* Apply some basic styles to the form */
+.address-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Style form groups */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Style labels */
+  label {
+    font-weight: bold;
+    display: block;
+  }
+  
+  /* Style form controls (input fields) */
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+  }
+  
+  /* Style the submit button */
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Change button appearance on hover */
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  

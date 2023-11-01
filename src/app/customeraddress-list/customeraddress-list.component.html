@@ -1,0 +1,46 @@
+<div class="container" *ngFor="let address of addresslist ;let i=index">
+<div class="row">
+    <div class="col-12">
+        <div class="card " style="margin-bottom: 20px;">
+            <div class="card-body">
+            <div class="row">
+               
+                <ul>
+                    <li style="display: flex; gap: 10px;">
+                        <p> <strong>Name</strong>{{address.name}}</p>
+                        <p><strong>House No. : </strong> {{address.houseNo}}</p>
+                        <p><strong>Line No.1 : </strong>{{address.addressline1}}</p>
+                    </li>
+                    <li style="display: flex; gap: 10px;">
+               
+                <p><strong>Line No.2 : </strong>{{address.addressline2}}</p>
+            </li>
+
+            <li style="display: flex; gap: 10px;">
+                <p><strong>City : </strong>{{address.city}}</p>
+                <p> <strong>State : </strong>{{address.stateOrProvince}}</p>
+                <p><strong>Country : </strong>{{address.country}}</p>
+                <p> <strong>PinCode : </strong>{{address.postalCode}}</p>
+            </li>
+            <li  style="display: flex; gap: 10px;">
+                <p> <strong>Mobile Number : </strong> +91-{{address.mobileNo}}
+            </li>
+               
+            </ul>
+
+ 
+            </div>
+            <div class="row justify-content-center" style="display: flex; gap: 10px;">
+                <button type="btn" class="btn btn-primary">Edit</button>
+                <button type="btn" class="btn btn-danger">Delete</button>
+                <button type="btn" class="btn btn-success">More</button>
+            </div>
+
+            
+
+            
+
+        </div>
+    </div>
+</div>
+</div>

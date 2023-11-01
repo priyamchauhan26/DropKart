@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6" *ngFor="let productimage of productImagesDto ">
+      <div class="card shadow">
+        <div class="card-body">
+          <img
+            src={{productimage.imageURL}}
+            alt="Image 1"
+            class="img-fluid"
+            style="width: 400px; height: 500px"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Add more images and descriptions as needed -->
+</div>

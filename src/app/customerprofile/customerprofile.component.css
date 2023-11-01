@@ -1,0 +1,13 @@
+.image-container {
+    border: 2px solid #000; /* Add your desired border style */
+    padding: 5px; /* Add your desired padding */
+    display: inline-block; /* Ensures the div only takes the necessary space */
+    border-radius: 50%; /* Rounds the corners to make it circular */
+    box-shadow: 20px black ;
+  }
+  
+  .image-container img {
+    display: block; /* Removes any extra space around the image */
+    border-radius: 50%; /* Rounds the corners of the image as well */
+    box-shadow: 20px black ;
+  }

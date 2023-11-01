@@ -1,0 +1,36 @@
+.component {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .rowbutton {
+    display: inline-block;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .new-address-button {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .other-address-button {
+    background-color: #4caf50;
+    color: white;
+  }
+  .card{
+
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100%;
+  
+  }
+  

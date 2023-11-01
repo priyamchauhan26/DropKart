@@ -1,0 +1,36 @@
+.card-body h1{
+    font-size: 12px;
+    padding: 0px;
+    margin: 0px;
+    
+
+}
+
+.totalMRP{
+    display: flex;
+    gap: 150px;
+}
+.DiscountMRP{
+    display: flex;
+    gap: 115px;
+}
+.Convinencefees{
+    display: flex;
+    gap: 115px;
+}
+.totalAMount{
+    display: flex;
+    gap: 115px;
+}
+.totalAMount h1{
+  font-size: 15px;
+}
+.placeorder{
+    background-color: rgb(255, 139, 193);
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    height: 40px;
+    border-radius: 10px;
+    border: 0px;
+}

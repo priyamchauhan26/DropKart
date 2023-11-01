@@ -1,0 +1,62 @@
+<div class="fluid-container" style="margin-left: 10px">
+  <div class="fluid-container">
+    <h3><strong>Men's Fashion store- 9523600</strong></h3>
+  </div>
+
+  <div class="fluid-container">
+    <h3><strong>Filters</strong></h3>
+  </div>
+
+  <div class="fluid-container">
+    <div class="row">
+      <div class="col-md-04">
+        <app-filter></app-filter>
+      </div>
+      <p>|</p>
+      <div class="col-md-08" style="margin-right: 10px">
+        <div class="container">
+          <div class="container" style="margin-top: 50px">
+            <div class="row">
+              <ng-container
+                *ngFor="let product of productdtolist; let i = index" 
+              >
+                <div class="col-md-3" (click)="onSubmit(i)">
+                  <div class="card-sl">
+                    <div class="card-image">
+                      <img
+                        src="https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                      />
+                    </div>
+
+                    <a class="card-action" href="#"
+                      ><i class="fa fa-heart"></i
+                    ></a>
+                    <div class="card-heading">
+                      {{ product.productname }}
+                      
+                    </div>
+                    <div class="card-heading">
+                      {{ product.productname }}
+                      
+                    </div>
+                    <div style="margin-top: 40px;">
+                      <div class="card-text">
+                        {{ product.productRating?.averageRating }}/5
+                      </div>
+                      <div class="card-text">
+                        {{ product.price }}
+                        <span style="color: red; margin-left: 20px">
+                          {{ product.productDiscount?.discountPercentage }}% off
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

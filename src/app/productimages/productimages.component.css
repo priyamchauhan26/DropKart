@@ -1,0 +1,22 @@
+.card-body{
+   
+    width: 400px;
+    padding:0%;
+   
+}
+col{
+    gap: 10px;
+}
+.card{
+    position: relative;
+    border-radius: 10px;
+    width: 420px;
+    height: 510px;
+    padding-top: 5px;
+    align-items: center;
+    
+}
+
+.shadow {
+    box-shadow: 0 .5rem 3rem rgba(7, 7, 7, 0.15)!important;
+}

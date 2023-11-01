@@ -1,0 +1,49 @@
+.card{
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 1px rgb(242, 183, 183) !important;
+
+}
+.card-body{
+    width: 100%;
+    position: relative;
+    display: flex;
+    
+}
+
+.detailsproduct h1{
+    margin: 0px;
+    margin-bottom: -10px;
+ 
+
+}
+.brandname{
+    font-size: 15px;
+   
+
+}
+.ProductName{
+    font-size: 12px;
+    color: grey;
+}
+.SoldBy{
+    font-size: 12px;
+    color: grey;
+}
+.productButton{
+    margin-top: 10px;
+display: flex;
+width: 250px;
+gap: 10px;
+align-items: center;
+border-radius: 30px;
+
+}
+.buttonSize{
+    width: 70px;
+    color: rgb(31, 28, 28);
+    background-color: pink;
+    border-radius: 30px;
+}

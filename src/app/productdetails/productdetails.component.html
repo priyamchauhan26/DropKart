@@ -1,0 +1,60 @@
+<div class="container productDetialsContainer">
+  <h1>
+    <Strong>{{ productDto.brandname }}</Strong>
+  </h1>
+  <h2>{{ productDto.productname }}</h2>
+  <div class="ratingdetails">
+    <h1 style="margin-top: 3.5px">
+      <strong>{{ productDto.productRating?.averageRating }}</strong>
+    </h1>
+    <span
+      ><i class="fa-solid fa-star" style="color: #61df58; margin-top: 15px"></i
+    ></span>
+    <h1>|</h1>
+    <h1>
+      {{ productDto.productRating?.totalReviews }}
+      <span style="font-family: 'Lobster', cursive; color: rgb(247, 109, 132)"
+        >reviews</span
+      >
+    </h1>
+  </div>
+  <div style="margin-top: -25px">
+    <hr />
+  </div>
+  <div class="pricedetials">
+    <h1>
+      <strong>Rs.{{ productDto.price }}</strong>
+    </h1>
+    <h1 style="color: rgb(243, 104, 104)">
+      {{ productDto.productDiscount?.discountPercentage }}%Off
+    </h1>
+  </div>
+  <h1 style="color: rgb(120, 232, 120)">Size</h1>
+  <div *ngIf="isSizeClicked">
+    <p>Please Select the size </p>
+  </div>
+  <div class="productSizedetials" *ngIf="productSizeDtolist">
+    <div *ngFor="let productsize of productSizeDtolist; let i = index">
+      <div
+        class="card"
+        [ngClass]="{ activebackground: activeCardIndex === i }"
+        (click)="oncardClick(i)"
+      >
+        <div class="card-body">
+          <h1>{{ productsize.productSize }}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="CartDetails">
+    <button type="submit" class="cartbutton" (click)="addtocart()">
+      <span style="font-size: 20px"> Add to Cart</span>
+    </button>
+    <button type="submit" class="cartbutton" (click)="addtowishlist()">
+      <span style="font-size: 20px"> Wishlist</span>
+    </button>
+  </div>
+  <div style="margin-top: 25px;">
+    <hr />
+  </div>
+</div>
