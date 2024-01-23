@@ -4,6 +4,9 @@ import { ProductDto } from '../dtos/ProductDto.model';
 import { async } from 'rxjs';
 import { ProductSizeDto } from '../dtos/ProductSizeDto.model';
 import { MessageDto } from '../dtos/Message.model';
+import { CartItemService } from '../service/cartItem/cart-item.service';
+import { CartService } from '../service/cart/cart.service';
+import { CartItem } from '../model/CartItem.model';
 
 @Component({
   selector: 'app-productdetails',
@@ -16,10 +19,11 @@ export class ProductdetailsComponent implements OnInit {
   productSizeDtolist:ProductSizeDto[]|any;
   productSizeDto:ProductSizeDto|any;
   messageDto:MessageDto|any;
+  cartItems:CartItem|any;
   activeCardIndex: number | null = null;
   isSizeClicked:boolean=false;
   flag:number=0;
-  constructor(private productService:ProductService){
+  constructor(private productService:ProductService ,private cartItemService:CartItemService,private cartService:CartService){
     
 
   }
@@ -60,6 +64,21 @@ export class ProductdetailsComponent implements OnInit {
     }
     console.log( "productSize" +this.productSizeDto.productSize);
     console.log( "product" +this.productDto);
+
+    this.cartItems = this.cartItems || {};
+    this.cartItems.productId=this.productDto.id;
+    this.cartItems.cartId=localStorage.getItem("cartId");
+    this.cartItems.size=this.productSizeDto.productSize;
+    this.cartItems.quantity=1;    
+    console.log("cartItems" + this.cartItems);
+
+
+    this.cartItemService.addItemtoCart(this.cartItems).subscribe((data:any)=>{
+      this.messageDto=data;
+      if(this.messageDto.status==200){
+        alert(this.messageDto.message);
+      }
+    })
 
   }
   addtowishlist(){
